@@ -245,11 +245,11 @@ footer ul li a:hover{
 /*hamburger menu*/
 .hamburger{
     position: fixed;
-    top:40px;
-    right:20px;
+    top:45px;
+    right:35px;
     cursor:pointer;
-    width:17px;
-    height:17px;
+    width:15px;
+    height:15px;
     background: none;
     border:none;
     z-index:100;
@@ -258,7 +258,7 @@ footer ul li a:hover{
 .hamburger-1,
 .hamburger-3{
     position:absolute;
-    width:17px;
+    width:15px;
     height:2px;
     top:0;
     left:0;
@@ -270,7 +270,7 @@ footer ul li a:hover{
 
 .hamburger-2{
     position:absolute;
-    width:17px;
+    width:15px;
     height:2px;
     top:0;
     left:0;
@@ -374,6 +374,14 @@ footer ul li a:hover{
     background-image: url('../img/falcon-9.webp');
 }
 
+.bg-falcon-heavy{
+    background-image: url('../img/falcon-heavy.webp')
+}
+
+.bg-dragon{
+    background-image: url('../img/dragon.webp')
+}
+
 .section-animate{
     animation: fadeInPage 2s ease-in-out
 }
@@ -390,13 +398,13 @@ footer ul li a:hover{
 .section-inner-center h3{
     font-size:90px;
     margin-bottom:15px;
-    animation: fadeInUp 0.5s ease-in-out 0.8s;
+    animation: fadeInUp 0.5s ease-in-out 0.3s;
     animation-fill-mode:both;
 }
 
 .section-inner-center p{
     font-size:20px;
-    animation: fadeInUp 0.5s ease-in-out 0.9s;
+    animation: fadeInUp 0.5s ease-in-out 0.4s;
     animation-fill-mode:both;
 }
 
@@ -490,7 +498,15 @@ footer ul li a:hover{
             margin:auto;
             padding:0;
         }
-}
+        .section-inner-center h3{
+            font-size:75px;
+        }
+
+    .shop-menu-right{
+        display:none;
+    }
+    }
+
 
 @media(max-width:600px){
     .section-inner{
@@ -511,5 +527,22 @@ footer ul li a:hover{
 
     footer ul li{
         margin-right:10px;
+    }
+
+    .section-inner-center{
+        width:85%;
+    }
+
+    .section-inner-center h3{
+        font-size:50px;
+    }
+
+    /*stats*/
+    .stats{
+        flex-direction: column;
+    }
+
+    .stats div{
+        margin-bottom:20px;
     }
 }

@@ -3,6 +3,7 @@ const overlay = document.getElementById('overlay');
 const menu = document.getElementById('mobile-menu')
 const shopMenuRight = document.getElementById('shop-menu-right')
 const counters = document.querySelectorAll('.counter');
+const hideH3 = document.getElementById('inner-section')
 let scrollStarted = false;
 
 btn.addEventListener('click', navToggle);
@@ -13,10 +14,12 @@ function scrollPage() {
 
     if(scrollPos > 100 && !scrollStarted) {
         countUp();
-        scrollStarted = true
+        scrollStarted = true;
+        hideH3.classList.add('mobile-only');
     }   else if (scrollPos < 100 && scrollStarted) {
-        resetCount()
+        resetCount();
         scrollStarted = false;
+        hideH3.classList.remove('mobile-only');
     }
 }
 
@@ -43,9 +46,8 @@ function countUp(){
             //if counter is less than target, add increment
             if(c < target) {
                 // round up and set counter value
-                counter.innerText = `${Math.ceil(c + increment)}`
-            
-            setTimeout(updateCounter, 75)
+                counter.innerText = `${Math.ceil(c + increment)}`        
+            setTimeout(updateCounter, 20)
             }   else{
                 counter.innerText = target;
             }
